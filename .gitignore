@@ -2,7 +2,27 @@
 .DS_Store
 
 # Xcode
-xcuserdata/
-*.xcuserstate
 DerivedData/
 build/
+*# macOS
+.DS_Store
+
+# Xcode
+DerivedData/
+build/
+*.xcuserdata/
+*.xcuserdatad/
+*.xcuserstate
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/
+
+# Swift Package Manager
+.build/
+Package.resolved
+
+# Archives
+*.ipa
+*.app
+
+# Logs
+*.log
