@@ -1,81 +1,54 @@
-/*
- ===============================
-        WORKOUT APP
- ===============================
+# 🏋️ SwiftUI Workout App
 
- 🎯 Objectif :
- Application SwiftUI basée sur MVVM permettant d'afficher une liste de workouts.
+Application iOS développée en **SwiftUI** permettant d’afficher une liste de workouts avec navigation vers une vue de détail.  
+Projet réalisé dans le cadre d’une formation, basé sur l’architecture **MVVM** et les bonnes pratiques de développement.
 
- ===============================
-        ARCHITECTURE MVVM
- ===============================
+---
 
- MODEL → Données (Workout, Category, Difficulty)
- VIEW → Interface utilisateur (SwiftUI)
- VIEWMODEL → Logique (non implémentée pour le moment)
+## 📱 Fonctionnalités
 
- ===============================
-        MODEL
- ===============================
+- Affichage d’une liste de workouts
+- Carte personnalisée pour chaque exercice
+- Navigation vers une vue de détail
+- Affichage des informations :
+  - nom
+  - catégorie
+  - niveau de difficulté
+  - description
+- Interface moderne avec dégradé
 
- Workout :
- - struct
- - Identifiable
- - name, image, category, difficulty, description
+---
 
- Category (enum) :
- - cardio, musculation, gainage
- - computed property : title
+## 🧱 Architecture
 
- Difficulty (enum) :
- - facile, intermédiaire, avancé
- - computed property : title
+Le projet suit l’architecture **MVVM** :
 
- ===============================
-        VIEWS
- ===============================
+workouts
+↓
+ForEach
+↓
+WorkoutCardView
+↓
+NavigationLink
+↓
+WorkoutDetailView
 
- WorkoutListView :
- - Liste des workouts
- - NavigationStack + ScrollView + ForEach
+---
 
- WorkoutCardView :
- - Carte réutilisable
- - Image + dégradé + texte
+## ⚙️ Concepts SwiftUI utilisés
 
- WorkoutDetailView :
- - Vue détail complète
+- `ZStack`
+- `VStack` / `HStack`
+- `NavigationStack`
+- `NavigationLink`
+- `ForEach`
+- `Identifiable`
 
- ===============================
-        DATA FLOW
- ===============================
+---
 
- workouts
-    ↓
- ForEach
-    ↓
- WorkoutCardView
-    ↓
- NavigationLink
-    ↓
- WorkoutDetailView
+## ✅ Bonnes pratiques
 
- ===============================
-        SWIFTUI CONCEPTS
- ===============================
+- Utilisation de couleurs adaptatives (`.primary`, `.secondary`)
+- Computed properties dans les enums
+- Séparation des responsabilités (MVVM)
 
- - ZStack
- - VStack / HStack
- - NavigationStack
- - NavigationLink
- - ForEach
- - Identifiable
-
- ===============================
-        BONNES PRATIQUES
- ===============================
-
- - Couleurs adaptatives (.primary, .secondary)
- - Computed properties dans les enums
- - Séparation des responsabilités (MVVM)
-*/
